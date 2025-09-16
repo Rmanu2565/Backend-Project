@@ -15,13 +15,18 @@ export const Jobs = mongoose.Schema({
     salary_range: {
         type: String
     },
+    openings: {
+        type: Number
+    },
     company_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Companies"
+        ref: "Companies",
+        require: true
     },
     created_by: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users"
+        ref: "Users",
+        require: true
     },
 },
     { timestamps: true }

@@ -9,4 +9,6 @@ const router = express.Router()
 router.post("/auth/register", encrptPassword, registerController)
 router.post("/auth/login", loginController, createToken)
 router.get("/users/:id", authenticateToken, getUserController)
+
+
 export default router;

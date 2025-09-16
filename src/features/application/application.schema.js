@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 export const Application = mongoose.Schema({
     job_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Jobs"
+        ref: "Jobs",
+        require: true
     },
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users"
+        ref: "Users",
+        require: true
     },
     resume: {
         type: String
@@ -24,3 +26,5 @@ export const Application = mongoose.Schema({
 }, {
     timestamps: true
 })
+
+export default Application;

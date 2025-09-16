@@ -17,8 +17,7 @@ export const createToken = async (req, res) => {
             name: name,
             token: token
         }
-
-        return (res, true, 200, "User Login Successful", data)
+        sendResponse(res, true, 200, "User Login Successful", data)
     } catch (error) {
         return (res, false, 500, error.message)
 
@@ -35,7 +34,7 @@ export const authenticateToken = async (req, res, next) => {
         next()
     } catch (error) {
         return sendResponse(res, false, 500, error.message)
-      
+
     }
 
 }

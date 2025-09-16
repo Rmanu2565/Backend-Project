@@ -14,9 +14,10 @@ export const Companies = mongoose.Schema({
     location: {
         type: String
     },
-    userId:{
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users"
+        ref: "Users",
+        require: true
     }
 })
 

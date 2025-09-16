@@ -1,10 +1,8 @@
 import mongoose from "mongoose";
 import userSchema from "./users.schema.js";
 import bcrypt from "bcrypt"
-import userDetails from "../userDetails/userDetails.schema.js";
 
 const Users = mongoose.model("Users", userSchema)
-const UserDetails = mongoose.model("userDetails", userDetails)
 
 export const registerService = async (data) => {
     try {

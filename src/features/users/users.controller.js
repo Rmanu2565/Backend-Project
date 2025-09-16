@@ -16,6 +16,7 @@ export const loginController = async (req, res, next) => {
     try {
         let data = req.body
         let result = await loginService(data)
+        console.log(result, "ressss")
         req.body.token = result[0]
         next()
     } catch (error) {
@@ -32,3 +33,4 @@ export const getUserController = async (req, res) => {
         return sendResponse(res, false, 500, error.message)
     }
 }
+
