@@ -38,7 +38,7 @@ export const loginService = async (data) => {
 export const getUserService = async (data) => {
     try {
         let result = await Users.aggregate([
-           
+
             {
                 $lookup: {
                     from: "userdetails",
@@ -63,3 +63,4 @@ export const getUserService = async (data) => {
         throw new Error(error)
     }
 }
+

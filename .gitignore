@@ -1,6 +1,8 @@
-# Create .gitignore file with Node.js patterns
+# Create .gitignore file with initial content
 echo "node_modules/" > .gitignore
-# echo ".env" >> .gitignore
+
+# Append additional entries
+echo ".env" >> .gitignore
 echo "npm-debug.log*" >> .gitignore
 echo "yarn-debug.log*" >> .gitignore
 echo "yarn-error.log*" >> .gitignore

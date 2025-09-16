@@ -27,7 +27,7 @@ export const userDetails = mongoose.Schema({
         type: String
     },
     expectedSalary: {
-        type: Number
+        type: String
     },
     resume: {
         type: String
